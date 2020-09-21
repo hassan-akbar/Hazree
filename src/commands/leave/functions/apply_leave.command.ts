@@ -27,8 +27,8 @@ export async function ApplyLeave(
     console.log(applied_date);
     console.log(leave_duration);
 
-    const applied_date_regex = /\b[1-3][0-9]-[1-2]?[1-9]\b/g;
-    const applied_duration_regex = /\b[1-2]?[1-9]\b/g;
+    const applied_date_regex = /\b[1-3][0-9]-[1-2]?[0-9]\b/g;
+    const applied_duration_regex = /\b[1-2]?[0-9]\b/g;
     if (applied_date_regex.test(applied_date) == false) {
       await chatPostMarkdown(
         com.userId,
@@ -38,7 +38,7 @@ export async function ApplyLeave(
       if (applied_duration_regex.test(leave_duration) == false) {
         await chatPostMarkdown(
           com.userId,
-          ">Please enter a valid duration time in the following formate `number of days i.e 10,15 etc.` :robot_face:"
+          ">Please enter a valid duration time in the following format `number of days i.e 10,15 etc.` :robot_face:"
         );
       } else {
         const doc = new LeavesModel({

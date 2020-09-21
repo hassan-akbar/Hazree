@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "lib": [
+      "es2015",
+      "es2018",
+      "es2020"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@commands/*": ["./src/commands/*"]
+    },
+    "outDir": "./dist",
+    "sourceMap": false,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitReturns": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "cdk.out"
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}

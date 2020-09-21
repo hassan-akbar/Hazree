@@ -1,0 +1,69 @@
+{
+  "name": "hazree",
+  "version": "1.0.0",
+  "description": "Attendance management system",
+  "main": "index.js",
+  "sideEffects": "false",
+  "scripts": {
+    "start": "node ./dist/bundle.js",
+    "start-dev": "nodemon",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "eslint": "eslint --fix --ignore-path .gitignore '**/*.ts'",
+    "build": "webpack --config ./webpack.config.js"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "author": "Softoo",
+  "license": "ISC",
+  "repository": "https://github.com/SOFTOO-Pvt-Ltd/Hazree",
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/jest": "^24.0.25",
+    "@types/lodash": "^4.14.149",
+    "@types/mongoose": "^5.5.40",
+    "@types/node": "^13.1.4",
+    "@types/uuid-validate": "0.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.0",
+    "jest": "^25.2.6",
+    "nodemon": "^2.0.3",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "source-map-loader": "^0.2.4",
+    "ts-jest": "^25.3.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.8.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@types/moment-timezone": "^0.5.13",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "moment-timezone": "^0.5.28",
+    "mongoose": "^5.8.5",
+    "superstruct": "^0.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint"
+    }
+  }
+}

@@ -50,6 +50,7 @@ export async function check_status(
         leave_duration: curr_query.applied_duration,
         status: curr_query.status,
         comments: curr_query.comments,
+        reason: curr_query.reason,
       });
       await chatPostMessage(com.userId, query_template);
     } else {
@@ -62,6 +63,7 @@ export async function check_status(
           leave_duration: curr_query.applied_duration,
           status: curr_query.status,
           comments: curr_query.comments,
+          reason: curr_query.reason,
         });
 
         Array.prototype.push.apply(Total_leaves, query_template);

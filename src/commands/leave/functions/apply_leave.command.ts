@@ -23,6 +23,12 @@ export async function ApplyLeave(
     const applied_date: string = com.parameters[1];
 
     const leave_duration: string = com.parameters[2];
+    let leave_reason: string = com.parameters
+      .slice(0)
+      .slice(3)
+      .toString()
+      .replace(new RegExp(",", "g"), " ");
+    console.log("APP ka reason : " + leave_reason);
     const userData = await userInfo(com.userId);
     console.log(applied_date);
     console.log(leave_duration);
@@ -48,6 +54,7 @@ export async function ApplyLeave(
           applied_date: applied_date,
           applied_duration: leave_duration,
           status: "Pending",
+          reason: leave_reason,
         });
         await doc.save();
         await chatPostMarkdown(

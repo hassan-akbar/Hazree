@@ -7,6 +7,7 @@ export type LeavesDocument = Document & {
   total_days: number;
   status: string;
   comments: string;
+  reason: string;
 };
 
 const schema: Schema<LeavesDocument> = new Schema({
@@ -17,6 +18,7 @@ const schema: Schema<LeavesDocument> = new Schema({
   applied_duration: { type: String, required: true },
   status: { type: String, required: true },
   comments: { type: String },
+  reason: { type: String },
 });
 
 export const LeavesModel: Model<LeavesDocument> = model("Leaves", schema);
